@@ -24,23 +24,69 @@
     Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона.
 */
 
-let [a, b] = [1, 2]
+// let [a, b] = [1, 2]
 
+// let arr = []
+// let sum = null
+
+// while (a < 4_000_000) {
+//     arr.push(a)
+//     c = a + b
+//     a = b
+//     b = c
+// }
+
+// for (const i in arr) {
+//     if (arr[i] % 2 === 0 && arr[i] < 4_000_000) {
+//         sum += arr[i] 
+//     }
+// }
+
+// console.log(sum);
+
+/* 
+    №3
+    Простые делители числа 13195 - это 5, 7, 13 и 29.
+    Каков самый большой делитель числа 600851475143, являющийся простым числом?
+*/
+
+
+let num = 13195
 let arr = []
-let sum = null
+let arrtwo = []
 
-while (a < 4_000_000) {
-    arr.push(a)
-    c = a + b
-    a = b
-    b = c
-}
-
-for (const i in arr) {
-    if (arr[i] % 2 === 0 && arr[i] < 4_000_000) {
-        sum += arr[i] 
+for (let i = 1; i <= num; i++) {
+    if(num % i === 0) {
+        arr.push(i)
     }
 }
 
-console.log(sum);
+for (const i in arr) {
+    for (let j = 1; j <= arr[i]; j++) {
+        if (arr[i] % j === 0) {
+           arrtwo.push(j)
+           console.log(arrtwo)
+           if (arrtwo.length === 2) {
+                
+                 
+           } else {
+               arrtwo.splice(1,2)
+           }
+        }
+    }
+}
 
+// for (let y = 1; y <= arr[4]; y++) {
+
+//     if (arr[4] % y === 0) {
+//         arrtwo.push(y)
+//     }
+
+// // }
+// console.log(arrtwo);
+
+// if (arrtwo.length === 2) {
+
+//     console.log(arrtwo[1])
+
+// }
