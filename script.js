@@ -50,43 +50,16 @@
     Каков самый большой делитель числа 600851475143, являющийся простым числом?
 */
 
+let num = 600851475143
 
-let num = 13195
-let arr = []
-let arrtwo = []
 
-for (let i = 1; i <= num; i++) {
-    if(num % i === 0) {
-        arr.push(i)
-    }
-}
-
-for (const i in arr) {
-    for (let j = 1; j <= arr[i]; j++) {
-        if (arr[i] % j === 0) {
-           arrtwo.push(j)
-           console.log(arrtwo)
-           if (arrtwo.length === 2) {
-                
-                 
-           } else {
-               arrtwo.splice(1,2)
-           }
+for (let i = 2; i != 0; i++) {
+    if (num % i === 0) {
+        num = num / i
+        if (num === 1) {
+            console.log(i);
+            break;
         }
     }
 }
 
-// for (let y = 1; y <= arr[4]; y++) {
-
-//     if (arr[4] % y === 0) {
-//         arrtwo.push(y)
-//     }
-
-// // }
-// console.log(arrtwo);
-
-// if (arrtwo.length === 2) {
-
-//     console.log(arrtwo[1])
-
-// }
