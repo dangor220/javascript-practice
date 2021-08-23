@@ -180,3 +180,78 @@
 
 
 // console.log(sort(arr));
+
+// const str = 'Hello'
+
+
+// for (let i = 0; i < str.length; i++) {
+//     console.log(str[i]);
+// }
+
+/*
+    В функцию передается массив, функция должна вернуть сумму всех нечетных чисел больше нуля
+*/
+// let arr = [5, 0, -5, 20, 88, 17, -32]
+// let sum = null
+
+// function getSumArr (arr) {
+
+//     return arr.reduce((accumulator, currentValue) => currentValue % 2 && currentValue > 0 ? accumulator + currentValue : accumulator)
+
+
+//     // for (let i = 0; i < arr.length; i++ ) {
+//     //     if (arr[i] % 2 !== 0 && arr[i] > 0) {
+//     //         sum += arr[i]
+//     //     }
+//     // }
+//     // return sum
+
+// }
+// console.log(getSumArr(arr));
+
+/*
+
+    В функцию передается массив целых чисел и число r. Написать функцию, которая вернет boolean, true в случае если в переданном массиве есть два числа, сумма которых равна r, иначе false.
+
+*/
+
+
+// function getBool (arr, r) {
+//     let flag = false
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if((arr[i] + arr[i + 1]) === r) {
+//             flag = true
+//             break
+//         } else {
+//             flag = false
+//         }
+//     }
+//     return flag
+// }
+
+// console.log(getBool([5, 8, 2, 4, 5, 6, 12], 7));
+
+
+
+function getBool (arr, r) {
+    let flag = false
+
+    
+    for (let i = 0; i < arr.length; i++) {
+        
+        for (let j = 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === r) {
+                flag = true
+                break
+            } else {
+                flag = false
+            }
+        }
+        break
+    }
+   
+    return flag
+}
+
+console.log(getBool([5, 8, 2, 4, 5, 6, 12], 11));
