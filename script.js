@@ -216,6 +216,8 @@
 */
 
 
+// ********* Неправильный варинат ********* 
+
 // function getBool (arr, r) {
 //     let flag = false
 
@@ -233,27 +235,85 @@
 // console.log(getBool([5, 8, 2, 4, 5, 6, 12], 7));
 
 
+// ********* Первый варинат ********* 
 
-function getBool (arr, r) {
-    let flag = false
+// function getBool (arr, r) {
+//     let flag = false
 
     
-    for (let i = 0; i < arr.length; i++) {
+//     for (let i = 0; i < arr.length; i++) {
         
-        for (let j = 1; j < arr.length; j++) {
-            if (arr[i] + arr[j] === r) {
-                flag = true
-                break
-            } else {
-                flag = false
-            }
-        }
-        if (flag) {
-            break
-        }
-    }
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] + arr[j] === r) {
+//                 flag = true
+//                 break
+//             } else {
+//                 flag = false
+//             }
+//         }
+//         if (flag) {
+//             break
+//         }
+//     }
    
-    return flag
+//     return flag
+// }
+
+// console.log(getBool([5, 22, 2, 12], 2));
+
+// ********* Второй варинат ********* 
+
+// function getBool (arr, r) {
+
+//     for (let i = 0; i < arr.length; i++) {
+        
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] + arr[j] === r) {
+//                 return true
+//             } 
+//         }
+        
+//     }
+   
+//     return false
+// }
+
+// console.log(getBool([5, 22, 2, 12], 34));
+
+/*
+    В функцию передается целое положительное число. Необходимо сделать так, чтобы функция возвращала сумму всех цифр в переданном числе.
+
+*/
+
+// function sumNum (num) {
+//     let sum = null
+//     let newNum = num.toString()
+
+//     for (let i = 0; i < newNum.length; i++) {
+//         sum += Number(newNum[i])
+//     }
+//     return sum
+// }
+
+// console.log(sumNum(55));
+// console.log(sumNum(9045));
+// console.log(sumNum(3));
+
+
+
+function sumNum (num) {
+    let sum = 0
+
+    while(num > 0) {
+        
+        sum += num % 10
+        num = Math.floor(num/10)
+
+    }
+
+    return sum
 }
 
-console.log(getBool([5, 8, 2, 4, 5, 6, 12], ));
+console.log(sumNum(55));
+console.log(sumNum(9045));
+console.log(sumNum(3));
