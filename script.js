@@ -248,10 +248,12 @@ function getBool (arr, r) {
                 flag = false
             }
         }
-        break
+        if (flag) {
+            break
+        }
     }
    
     return flag
 }
 
-console.log(getBool([5, 8, 2, 4, 5, 6, 12], 11));
+console.log(getBool([5, 8, 2, 4, 5, 6, 12], ));
