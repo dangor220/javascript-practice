@@ -638,15 +638,251 @@
 В функцию передается строка, содержащая английские буквы, функция должна вернуть массив, содержащий все возможные комбинации букв.
 */
 
-function getLettersVariants(str) {
-    if (str.length === 1) {
-        return [str]
-    }
+// function getLettersVariants(str) {
+//     if (str.length === 1) {
+//         return [str]
+//     }
 
-    let arrStr = str.split('')
+//     const arr = new Set()
 
-    for (let i = 0; i < arrStr.length; i++) {
-        
-    }
+//     for (let i = 0; i < str.length; i++) {
+//         const variants = getLettersVariants(str.slice(0, i) + str.slice(i + 1))
+//         for (const variant of variants) {
+//             arr.add(str[i] + variant)
+            
+//         }
+//     }
+//     return arr
+// }
+// console.log(getLettersVariants('asd'));
+
+/*
+ Функция getEventElement принимает массив с целыми числами, необходимо реализовать функцию так, чтобы она возвращала значение большего элемента массива, который записан в четном индексе включая 0
+*/
+
+// function getEventElement(arr) {
+//     let newArr = []
+
+//     for (let i = 0; i < arr.length; i++) {
+//         i % 2 === 0 ? newArr.push(arr[i]) : false
+//     }
+    
+//     return Math.max(...newArr)
+    
+// }
+
+// console.log(getEventElement([5, 7, -1, 12, 3, 0]));
+// console.log(getEventElement([4, -12, 29, 6, 31, 92, -50]));
+
+ 
+/*
+Необходимо создать функцию encode, которая будет принимать строку с буквами на английском языке, необходимо сделать так чтобы из функции возвращалась строка, в которой гласные буквы были заменены на цифры
+
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+
+Также необходимо создать функцию decode, которая принимает зашифрованную строку и возвращает востановленную.
+*/
+
+// function encode(str) {
+//     const arr = ['a', 'e', 'i', 'o', 'u']
+//     return str.split('').map(elem => {
+//         let index = arr.indexOf(elem)
+//         return index !== -1 ? index + 1 : elem
+//     }).join('')
+// }
+
+// function decode(str) {
+//     const arr = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+//     return str.split('').map(elem => {
+//         return isNaN(elem) ? elem : arr[elem]
+//     }).join('')
+// }
+
+// console.log(encode('hello'));
+// console.log(decode(encode('hello')));
+
+
+// function encode (str) {
+//     let newStr = str.split('')
+//     for(let i = 0; i < newStr.length; i++) {
+//         switch (newStr[i]) {
+//             case 'a':
+//                 newStr[i] = 1
+//                 break;
+//             case 'e':
+//                 newStr[i] = 2
+//                 break;
+//             case 'i':
+//                 newStr[i] = 3
+//                 break;
+//             case 'o':
+//                 newStr[i] = 4
+//                 break;
+//             case 'u':
+//                 newStr[i] = 5
+//                 break;
+//         }
+//     }
+//     return newStr.join('')
+// }
+
+// function decode (str) {
+//     let newStr = str.split('')
+//     for(let i = 0; i < newStr.length; i++) {
+//         switch (newStr[i]) {
+//             case '1':
+//                 newStr[i] = 'a'
+//                 break;
+//             case '2':
+//                 newStr[i] = 'e'
+//                 break;
+//             case '3':
+//                 newStr[i] = 'i'
+//                 break;
+//             case '4':
+//                 newStr[i] = 'o'
+//                 break;
+//             case '5':
+//                 newStr[i] = 'u'
+//                 break;
+//         }
+//     }
+//     return newStr.join('')
+// }
+
+// console.log(encode('hello'));
+
+// console.log(decode(encode('hello')));
+
+/*
+Напишите программу, которая выводит на экран числа от 1 до 100. При этои вместо чисел, кратных трем, программа должна выводить слово "Fizz", а вместо чисел кратных пяти - слово "Buzz". Если число кратно и 3 и 5, то программа должна выводить слово "FizzBuzz"
+*/
+
+// function exNum () {
+//     for(let i = 1; i <= 100; i++) {
+//         if (i % 3 === 0) {
+//             console.log('Fizz');
+//         } else if (i % 5 === 0) {
+//             console.log('Buzz');
+//         } else if (i % 3 === 0 && i % 5 === 0) {
+//             console.log('FizzBuzz');
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+// exNum ();
+
+/*
+Реализовать функцию, которая будет работать при любом колличестве вызовов верно. Внутрь функции всегда передается число, проверять не нужно.
+*/
+
+
+// function add(n) {
+//     if(n === undefined) return 0
+//     let sum = n
+//     return function recursive(num) {
+//         if(num === undefined) return sum
+//         sum += num
+//         return recursive;
+//     }
+
+// }
+
+
+
+// // console.log(add());
+// console.log(add(2)());
+// console.log(add(2)(3)());
+// console.log(add(5)(-1)(2)());
+
+/*
+В функцию sumAge передается структура, в которой описан человек и его дети. Необходимо реализовать функцию sumAge так, чтобы она возвращала сумму человека и всех его детей.
+*/
+
+// function sumAge(user) {
+
+//     let sum = 0
+//     if (user?.age) sum += user.age
+
+//     if(user?.children) {
+//        for(let i = 0; i < user.children.length; i++) {
+//            sum += user.children[i].age;
+//            if(user.children[i]?.children) {
+//                for(let j = 0; j < user.children[i].children.length; j++) {
+//                 sum += user.children[i].children[j].age;
+//                }
+//            }
+//        }
+//     }
+
+//     return sum
+
+// }
+
+// Рекурсивный вариант 
+// function sumAge(user) {
+
+//     let sum = user.age
+
+//     if(user?.children) {
+//         for (let i = 0; i < user.children.length; i++) {
+//             if(user.children[i]?.children) {
+//                 sum += sumAge(user.children[i])
+//             } else {
+//                 sum += user.children[i].age
+//             }
+//         }
+//     }
+    
+
+//     return sum
+
+// }
+
+function sumAge(user) {
+
+    return user.children.reduce((accum, elem) => elem.children ? accum + sumAge(elem) : accum + elem.age, user.age)
+
 }
-console.log(getLettersVariants('ssdda'));
+
+const user = {
+    name: 'Петр',
+    age: 49,
+    children: [
+        {
+            name: 'Нина',
+            age: 25,
+            children: [
+                {
+                    name: 'Андрей',
+                    age: 3,
+                    children: [
+                        {
+                            name: 'Андрей',
+                            age: 22
+                        },
+                        {
+                            name: 'Олег',
+                            age: 1
+                        },
+                    ]
+                },
+                {
+                    name: 'Олег',
+                    age: 1
+                },
+            ]
+        },
+        {
+            name: 'Александр',
+            age: 22
+        },
+    ]
+}
+
+console.log(sumAge(user));
