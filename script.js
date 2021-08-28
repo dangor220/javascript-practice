@@ -844,45 +844,78 @@ u -> 5
 
 // }
 
-function sumAge(user) {
+// function sumAge(user) {
 
-    return user.children.reduce((accum, elem) => elem.children ? accum + sumAge(elem) : accum + elem.age, user.age)
+//     return user.children.reduce((accum, elem) => elem.children ? accum + sumAge(elem) : accum + elem.age, user.age)
 
+// }
+
+// const user = {
+//     name: 'Петр',
+//     age: 49,
+//     children: [
+//         {
+//             name: 'Нина',
+//             age: 25,
+//             children: [
+//                 {
+//                     name: 'Андрей',
+//                     age: 3,
+//                     children: [
+//                         {
+//                             name: 'Андрей',
+//                             age: 22
+//                         },
+//                         {
+//                             name: 'Олег',
+//                             age: 1
+//                         },
+//                     ]
+//                 },
+//                 {
+//                     name: 'Олег',
+//                     age: 1
+//                 },
+//             ]
+//         },
+//         {
+//             name: 'Александр',
+//             age: 22
+//         },
+//     ]
+// }
+
+// console.log(sumAge(user));
+
+
+// function sequence(start = 0, step = 1) {
+//     let result = start
+//     return function() {
+//         result =+ step
+        
+//         return result
+//     }
+    
+// }
+
+// const generator1 = sequence(10, 3)
+// const generator2 = sequence(7, 1)
+
+// console.log(generator1());
+// console.log(generator1());
+// console.log(generator2());
+// console.log(generator1());
+// console.log(generator2());
+
+
+function filter(arr, fun) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {   
+            if (fun(arr[i])) {
+                newArr.push(arr[i])
+            }
+    }
+    return newArr
 }
 
-const user = {
-    name: 'Петр',
-    age: 49,
-    children: [
-        {
-            name: 'Нина',
-            age: 25,
-            children: [
-                {
-                    name: 'Андрей',
-                    age: 3,
-                    children: [
-                        {
-                            name: 'Андрей',
-                            age: 22
-                        },
-                        {
-                            name: 'Олег',
-                            age: 1
-                        },
-                    ]
-                },
-                {
-                    name: 'Олег',
-                    age: 1
-                },
-            ]
-        },
-        {
-            name: 'Александр',
-            age: 22
-        },
-    ]
-}
-
-console.log(sumAge(user));
+console.log(filter([1, 3, 2, 4], n => n < 3));
