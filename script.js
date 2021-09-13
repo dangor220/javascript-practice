@@ -908,14 +908,222 @@ u -> 5
 // console.log(generator2());
 
 
-function filter(arr, fun) {
-    let newArr = []
-    for (let i = 0; i < arr.length; i++) {   
-            if (fun(arr[i])) {
-                newArr.push(arr[i])
-            }
-    }
-    return newArr
-}
+// function filter(arr, fun) {
+//     let newArr = []
+//     for (let i = 0; i < arr.length; i++) {   
+//             if (fun(arr[i])) {
+//                 newArr.push(arr[i])
+//             }
+//     }
+//     return newArr
+// }
 
-console.log(filter([1, 3, 2, 4], n => n < 3));
+// console.log(filter([1, 3, 2, 4], n => n < 3)); 
+
+
+/*
+    №4
+Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково. Самое большое число-палиндром, полученное умножением двух двузначных чисел – 9009 = 91 × 99.
+
+Найдите самый большой палиндром, полученный умножением двух трехзначных чисел.
+*/
+
+
+// function isPalindrom(num) {
+//     let reverseNum = Number(num.toString().split('').reverse().join(''))
+//     return num === reverseNum ? true : false
+// }
+
+// function generateNumber() {
+//     let newNum = null
+//     let arr = []
+//     for (let i = 100; i < 999; i++) {
+//         for (let j = 100; j < 999; j++) {
+//             newNum = i * j
+//             if (isPalindrom(newNum)) {
+//                 arr.push(newNum)
+//             }
+//         }
+//     }
+//     return Math.max(...arr)
+// }
+// console.log(generateNumber());
+
+
+/*
+    №5
+2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
+Какое самое маленькое число делится нацело на все числа от 1 до 20?
+*/
+
+// function minNumber() {
+//    let num = 1
+//    let flag = false
+//    let r = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14,15,16,17,18,19,20]
+
+//    while (flag === false) {
+//        for (const j of r) {
+//           if(num % j === 0) {
+//                flag = true
+//                continue
+//            } else {
+//                flag = false
+//                break
+//            } 
+//         }
+//         num++
+//     }
+//     return num - 1
+//    }
+
+// console.log(minNumber());
+
+/*
+    №6
+Сумма квадратов первых десяти натуральных чисел равна
+
+1^2 + 2^2 + ... + 10^2 = 385
+Квадрат суммы первых десяти натуральных чисел равен
+
+(1 + 2 + ... + 10)^2 = 55^2 = 3025
+Следовательно, разность между суммой квадратов и квадратом суммы первых десяти натуральных чисел составляет 3025 − 385 = 2640.
+
+Найдите разность между суммой квадратов и квадратом суммы первых ста натуральных чисел.
+*/
+
+// function getPow() {
+//     let powSum = null;
+//     let sum = null
+//     for(let i = 1; i <= 100; i++) {
+//         powSum += Math.pow(i, 2)
+//         sum += i
+//     }  
+
+//     return Math.pow(sum, 2) - powSum
+// }
+// console.log(getPow());
+
+
+// Из массива в объект
+
+// function transform(arr) {
+
+//     const newObj = {}
+
+//     for (const item of arr) {
+//         newObj[item.name] = item.value
+//     }
+
+//     return newObj;
+// }
+
+// const arr = [{name: 'name', value: 'Анатолий'},{name: 'age', value: 40}]
+
+
+// console.log(transform(arr));
+
+
+// function fact(num) {
+
+//     let sum = 1n
+
+//     for (let i = BigInt(num); i >= 1n; i--) {
+//         BigInt(sum *= i)
+//     }
+
+    
+//     let newArr = sum.toString().split('')
+
+//     let sumNum = 0
+
+//     for (const iterator of newArr) {
+//         sumNum += +iterator
+//     }
+
+//     return sumNum
+// }
+
+// console.log(fact(100));
+
+
+/*
+
+    В функцию maxSum передается двумерный массив в виде треугольника (горки),
+    необходимо найти наибольшую сумму от вершины до низа треугольника. С числа сверху мы можем переходить лишь на нижнее число и его соседей.
+    Массив может иметь очень большое количество вложенных массивов.
+    Проверять на правильность массива не нужно, передается всегда правильно составленный массив
+
+*/
+
+
+// function maxSum(arr) {
+   
+//     let targets = Array.from(arr)
+
+//     for (let i = targets.length - 2; i >= 0; i--) {
+//         targets[i] = targets[i].map((item, index) => {
+//             let slice = targets[i+1].slice(
+//                 ((index > 0) ? index - 1 : 0),
+//                 index + 2
+//             )
+//             return item + Math.max(...slice)
+//         })
+//     }
+
+//     return targets[0][0]
+    
+// }
+
+
+// console.log(maxSum([
+//     [1],
+//     [4, 8],
+//     [1, 5, 3],
+// ])); //14
+
+// console.log(maxSum([
+//     [1],
+//     [-3, -4],
+//     [2, 1, 9],
+// ])); //6
+
+
+// let arr = [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 7, 9, 10, 11]
+
+
+// function getSum(arr) {
+//     let sum = 0
+//     for (const item of arr) {
+//         sum += item
+//     }
+   
+
+//     return sum / arr.length 
+// }
+
+// console.log(getSum(arr));
+
+
+// localStorage
+
+
+
+document.querySelector('button').addEventListener('click', function() {
+  let value = document.querySelector('input').value;
+
+  let obj = {
+    text: value,
+  }
+
+  localStorage.setItem('headerText', JSON.stringify(obj));
+})
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  let obj = JSON.parse(localStorage.getItem('headerText'));
+
+  if (obj.text && obj.text.trim()) {
+    document.querySelector('h1').textContent = obj.text;
+  }
+})
