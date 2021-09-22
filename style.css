@@ -1,0 +1,14 @@
+ul {
+  font-size: 25px;
+  list-style: none;
+  letter-spacing: 2px;
+  word-spacing: 20px;
+  line-height: 45px;
+}
+ul li {
+  color: rgb(73, 13, 13);
+  text-transform: uppercase;
+}
+ul li span {
+  color: black;
+}

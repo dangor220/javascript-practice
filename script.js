@@ -1,10 +1,9 @@
-"use strict";
+'use strict';
 /* 
     №1
     Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9. Сумма этих чисел равна 23.
     Найдите сумму всех чисел меньше 1000, кратных 3 или 5.
 */
-
 
 // let num = +prompt('Введите число: ', '1000')
 // let sum = null
@@ -16,7 +15,6 @@
 // }
 
 // alert(`Сумма всех чисел меньше ${num}, кратных 3 или 5 равна: ${sum}`)
-
 
 /* 
     №2
@@ -39,7 +37,7 @@
 
 // for (const i in arr) {
 //     if (arr[i] % 2 === 0 && arr[i] < 4_000_000) {
-//         sum += arr[i] 
+//         sum += arr[i]
 //     }
 // }
 
@@ -53,7 +51,6 @@
 
 // let num = 600851475143
 
-
 // for (let i = 2; i != 0; i++) {
 //     if (num % i === 0) {
 //         num = num / i
@@ -63,7 +60,6 @@
 //         }
 //     }
 // }
-
 
 /*
 
@@ -111,7 +107,7 @@
 */
 
 // function getEven (arr) {
-    
+
 //     let newArr = []
 
 //     for (const i in arr) {
@@ -161,7 +157,6 @@
 // console.log(isIntersect({x: 0, y: 0, r: 2}, {x: 2, y: 2, r: 1}));
 // console.log(isIntersect({x: 0, y: 0, r: 2}, {x: 0, y: 1, r: 1}));
 
-
 /*
     Выполнить сортировку
 */
@@ -171,18 +166,16 @@
 //        if(arr[i] < arr[i - 1]) {
 //             arr.splice(i, 1)
 //             i--
-//        } 
+//        }
 //    }
 //   return arr
 // }
 
 // const arr = [5, 18, 2, -7, 88, 20, 109]
 
-
 // console.log(sort(arr));
 
 // const str = 'Hello'
-
 
 // for (let i = 0; i < str.length; i++) {
 //     console.log(str[i]);
@@ -197,7 +190,6 @@
 // function getSumArr (arr) {
 
 //     return arr.reduce((accumulator, currentValue) => currentValue % 2 && currentValue > 0 ? accumulator + currentValue : accumulator)
-
 
 //     // for (let i = 0; i < arr.length; i++ ) {
 //     //     if (arr[i] % 2 !== 0 && arr[i] > 0) {
@@ -215,8 +207,7 @@
 
 */
 
-
-// ********* Неправильный варинат ********* 
+// ********* Неправильный варинат *********
 
 // function getBool (arr, r) {
 //     let flag = false
@@ -234,15 +225,13 @@
 
 // console.log(getBool([5, 8, 2, 4, 5, 6, 12], 7));
 
-
-// ********* Первый варинат ********* 
+// ********* Первый варинат *********
 
 // function getBool (arr, r) {
 //     let flag = false
 
-    
 //     for (let i = 0; i < arr.length; i++) {
-        
+
 //         for (let j = i + 1; j < arr.length; j++) {
 //             if (arr[i] + arr[j] === r) {
 //                 flag = true
@@ -255,26 +244,26 @@
 //             break
 //         }
 //     }
-   
+
 //     return flag
 // }
 
 // console.log(getBool([5, 22, 2, 12], 2));
 
-// ********* Второй варинат ********* 
+// ********* Второй варинат *********
 
 // function getBool (arr, r) {
 
 //     for (let i = 0; i < arr.length; i++) {
-        
+
 //         for (let j = i + 1; j < arr.length; j++) {
 //             if (arr[i] + arr[j] === r) {
 //                 return true
-//             } 
+//             }
 //         }
-        
+
 //     }
-   
+
 //     return false
 // }
 
@@ -299,13 +288,11 @@
 // console.log(sumNum(9045));
 // console.log(sumNum(3));
 
-
-
 // function sumNum (num) {
 //     let sum = 0
 
 //     while(num > 0) {
-        
+
 //         sum += num % 10
 //         num = Math.floor(num/10)
 
@@ -331,19 +318,18 @@
 
 //     return result
 
-    // let maxValue = Math.max(...arr)
-    // let num = maxValue - (maxValue / 10)
-    // let newArr = []
+// let maxValue = Math.max(...arr)
+// let num = maxValue - (maxValue / 10)
+// let newArr = []
 
-    // for (let i = 0; i < arr.length; i++) {
-    //     if(arr[i] > num && arr[i] !== maxValue) {
-    //         newArr.push(arr[i])
-    //     } 
-    // }
-
-    // return newArr
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] > num && arr[i] !== maxValue) {
+//         newArr.push(arr[i])
+//     }
 // }
 
+// return newArr
+// }
 
 // console.log(func([5, 88, 95, 100, 77, 21, 92]));
 
@@ -388,7 +374,6 @@
 
 // console.log(unique([1, 8, 1, 5, 9, 5, 8]));
 
-
 /*
 Реализовать функцию round5, которой передается целое число, функция должна возващать ближайшее целое число к тому что было передано, без остатка делящееся на 5
 */
@@ -429,7 +414,6 @@
 
 // console.log(uniquePoints(arr));
 
-
 /*
 Необходимо перебрать массив с конца в начало и вывести в консоль сообщение вида:
 'Под свойством 5 лежит значение 35'
@@ -456,7 +440,7 @@
 //     let newArr = []
 //     for(let i = 1; i < arr.length + 1; i++) {
 //         newArr.push(arr[arr.length - i])
-        
+
 //     }
 //     for (let j = 0; j < newArr.length; j++) {
 //         console.log(`Под свойством ${j} лежит значение ${newArr[j]}`);
@@ -474,7 +458,6 @@
 //     console.log(`Под свойством ${item} лежит значение ${elem}`);
 // });
 
-
 //
 // const arr = [51, 8, 99, 71, 2, 35]
 
@@ -488,16 +471,16 @@
 
 // function getArr(num) {
 //     let arr = []
-    
+
 //     // while (num >= 0) {
 //     //     if (num % 3 === 0) {
-            
+
 //     //     }
 //     //     num--
 //     // }
 
 //     for (num; num >= 0; num--) num % 3 === 0 ? arr.push(num): num--
-    
+
 //     return arr
 
 // }
@@ -519,16 +502,14 @@
 //         }
 //     });
 
-
 //     return sum
 // }
 
 // console.log(getEvenElementSum([5, 7, -1, 12, 3, 0]));
 // console.log(getEvenElementSum([4, -12, 29, 6, 31, 2, -50]));
 
-
 // function getEvenElementSum(arr) {
-    
+
 //    return arr.reduce((accum, elem, id) => {
 //        if (id % 2 === 0) {
 //             accum += elem
@@ -557,25 +538,24 @@
 //     }
 //     return arr
 
-    // while (a > b) {
-    //     if (a % c === 0) {
-    //         arr.push(a)
-           
-    //     } 
-    //     a--
-    // }
-    // while (a < b) {
-    //     if (a % c === 0) {
-    //         arr.push(a)
-           
-    //     }
-    //     a++
+// while (a > b) {
+//     if (a % c === 0) {
+//         arr.push(a)
+
+//     }
+//     a--
+// }
+// while (a < b) {
+//     if (a % c === 0) {
+//         arr.push(a)
+
+//     }
+//     a++
 //     // }
 //     return arr
 // }
 
 // console.log(filter(32, 15, 3));
-
 
 /*
 Вывести в консоль все числа  меньше миллиона, которык являются паллиндромами по основаниям 10 и 2
@@ -633,7 +613,6 @@
 // console.log(itPalindrom('hello'));
 // console.log(itPalindrom('Heeeeh'));
 
-
 /*
 В функцию передается строка, содержащая английские буквы, функция должна вернуть массив, содержащий все возможные комбинации букв.
 */
@@ -649,7 +628,7 @@
 //         const variants = getLettersVariants(str.slice(0, i) + str.slice(i + 1))
 //         for (const variant of variants) {
 //             arr.add(str[i] + variant)
-            
+
 //         }
 //     }
 //     return arr
@@ -666,15 +645,14 @@
 //     for (let i = 0; i < arr.length; i++) {
 //         i % 2 === 0 ? newArr.push(arr[i]) : false
 //     }
-    
+
 //     return Math.max(...newArr)
-    
+
 // }
 
 // console.log(getEventElement([5, 7, -1, 12, 3, 0]));
 // console.log(getEventElement([4, -12, 29, 6, 31, 92, -50]));
 
- 
 /*
 Необходимо создать функцию encode, которая будет принимать строку с буквами на английском языке, необходимо сделать так чтобы из функции возвращалась строка, в которой гласные буквы были заменены на цифры
 
@@ -704,7 +682,6 @@ u -> 5
 
 // console.log(encode('hello'));
 // console.log(decode(encode('hello')));
-
 
 // function encode (str) {
 //     let newStr = str.split('')
@@ -781,7 +758,6 @@ u -> 5
 Реализовать функцию, которая будет работать при любом колличестве вызовов верно. Внутрь функции всегда передается число, проверять не нужно.
 */
 
-
 // function add(n) {
 //     if(n === undefined) return 0
 //     let sum = n
@@ -792,8 +768,6 @@ u -> 5
 //     }
 
 // }
-
-
 
 // // console.log(add());
 // console.log(add(2)());
@@ -824,7 +798,7 @@ u -> 5
 
 // }
 
-// Рекурсивный вариант 
+// Рекурсивный вариант
 // function sumAge(user) {
 
 //     let sum = user.age
@@ -838,7 +812,6 @@ u -> 5
 //             }
 //         }
 //     }
-    
 
 //     return sum
 
@@ -887,15 +860,14 @@ u -> 5
 
 // console.log(sumAge(user));
 
-
 // function sequence(start = 0, step = 1) {
 //     let result = start
 //     return function() {
 //         result =+ step
-        
+
 //         return result
 //     }
-    
+
 // }
 
 // const generator1 = sequence(10, 3)
@@ -907,10 +879,9 @@ u -> 5
 // console.log(generator1());
 // console.log(generator2());
 
-
 // function filter(arr, fun) {
 //     let newArr = []
-//     for (let i = 0; i < arr.length; i++) {   
+//     for (let i = 0; i < arr.length; i++) {
 //             if (fun(arr[i])) {
 //                 newArr.push(arr[i])
 //             }
@@ -918,8 +889,7 @@ u -> 5
 //     return newArr
 // }
 
-// console.log(filter([1, 3, 2, 4], n => n < 3)); 
-
+// console.log(filter([1, 3, 2, 4], n => n < 3));
 
 /*
     №4
@@ -927,7 +897,6 @@ u -> 5
 
 Найдите самый большой палиндром, полученный умножением двух трехзначных чисел.
 */
-
 
 // function isPalindrom(num) {
 //     let reverseNum = Number(num.toString().split('').reverse().join(''))
@@ -949,7 +918,6 @@ u -> 5
 // }
 // console.log(generateNumber());
 
-
 /*
     №5
 2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
@@ -969,7 +937,7 @@ u -> 5
 //            } else {
 //                flag = false
 //                break
-//            } 
+//            }
 //         }
 //         num++
 //     }
@@ -997,12 +965,11 @@ u -> 5
 //     for(let i = 1; i <= 100; i++) {
 //         powSum += Math.pow(i, 2)
 //         sum += i
-//     }  
+//     }
 
 //     return Math.pow(sum, 2) - powSum
 // }
 // console.log(getPow());
-
 
 // Из массива в объект
 
@@ -1019,9 +986,7 @@ u -> 5
 
 // const arr = [{name: 'name', value: 'Анатолий'},{name: 'age', value: 40}]
 
-
 // console.log(transform(arr));
-
 
 // function fact(num) {
 
@@ -1031,7 +996,6 @@ u -> 5
 //         BigInt(sum *= i)
 //     }
 
-    
 //     let newArr = sum.toString().split('')
 
 //     let sumNum = 0
@@ -1045,7 +1009,6 @@ u -> 5
 
 // console.log(fact(100));
 
-
 /*
 
     В функцию maxSum передается двумерный массив в виде треугольника (горки),
@@ -1055,9 +1018,8 @@ u -> 5
 
 */
 
-
 // function maxSum(arr) {
-   
+
 //     let targets = Array.from(arr)
 
 //     for (let i = targets.length - 2; i >= 0; i--) {
@@ -1071,9 +1033,8 @@ u -> 5
 //     }
 
 //     return targets[0][0]
-    
-// }
 
+// }
 
 // console.log(maxSum([
 //     [1],
@@ -1087,43 +1048,344 @@ u -> 5
 //     [2, 1, 9],
 // ])); //6
 
-
 // let arr = [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 7, 9, 10, 11]
-
 
 // function getSum(arr) {
 //     let sum = 0
 //     for (const item of arr) {
 //         sum += item
 //     }
-   
 
-//     return sum / arr.length 
+//     return sum / arr.length
 // }
 
 // console.log(getSum(arr));
 
-
 // localStorage
 
+// document.querySelector('button').addEventListener('click', function() {
+//   let value = document.querySelector('input').value;
 
+//   let obj = {
+//     text: value,
+//   }
 
-document.querySelector('button').addEventListener('click', function() {
-  let value = document.querySelector('input').value;
+//   localStorage.setItem('headerText', JSON.stringify(obj));
+// })
 
-  let obj = {
-    text: value,
+// document.addEventListener('DOMContentLoaded', function() {
+
+//   let obj = JSON.parse(localStorage.getItem('headerText'));
+
+//   if (obj.text && obj.text.trim()) {
+//     document.querySelector('h1').textContent = obj.text;
+//   }
+// })
+
+/*
+ *
+ * Решение статистической задачи!
+ *
+ */
+
+// // Выборка
+
+// // Первая задача
+
+// let arr = [0,0,0,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,3,3,3,3,4,4,5,5,5,5,6,7,9,10,11].sort((a,b) => a - b);
+
+// // Вторая задача
+// // let arr = [289,203,359,243,232,210,251,246,224,239,220,211].sort((a,b) => a - b);
+
+// // Третья задача
+// // let arr = [1.2, 1.4, 1.6, 1.7,1.7, 1.8, 2.2, 2.3, 2.4, 6.4, 19.0, 23.6].sort((a,b) => a - b);
+
+// // 4 задача
+// // let arr = [1,2,3,4,5,6].sort((a,b) => a - b);
+
+// // let str = prompt('Введите значения выборки через запятую')
+// // let arrMap = str.split(',');
+// // let arr = arrMap.map(Number).sort((a,b) => a - b);
+
+// // Частота
+// let num = arr.length;
+
+// // Среднее
+// function medium(arr) {
+//   let medium = 0;
+//   for (const iterator of arr) {
+//     medium += iterator;
+//   }
+
+//   return  parseFloat((medium / arr.length).toFixed(2))
+// }
+
+// // Дисперсия
+// function disp(arr, medium) {
+//   let newArr = [];
+//   let sumArr = 0;
+//   for (const iterator of arr) {
+//     newArr.push(Math.pow((iterator - medium), 2))
+//   }
+//   for (const iterator of newArr) {
+//     sumArr += iterator;
+//   }
+//   return parseFloat(Math.sqrt(sumArr / num).toFixed(1))
+// }
+
+// // Медиана
+// function mediana(arr) {
+//   let mediumMediand = num / 2;
+//   return (arr[Math.round(mediumMediand)] + arr[Math.round(mediumMediand) - 1]) / 2 ;
+// }
+
+// // 75-процентиль
+// function sevenfiveProc(arr) {
+//   return arr[Math.round(((arr.length * 75) / 100)) - 1];
+// }
+
+// // 25-процентиль
+// function twofiveProc(arr) {
+//   return arr[Math.round(((arr.length * 25) / 100) - 1)];
+// }
+
+// // // Гауссово распределение
+// // function gaus(disp, medium, arr) {
+
+// //   let newArr = [];
+// //   let sumArr = 0;
+// //   for (const iterator of arr) {
+// //     newArr.push(Math.pow((iterator - medium), 2))
+// //   }
+// //   for (const iterator of newArr) {
+// //     sumArr += iterator;
+// //   }
+
+// //   let step = Math.exp((1/2) * ((sumArr)/disp));
+// //   let gaus = (1 / (disp * Math.sqrt(2 * Math.PI)));
+// //   let pow = Math.pow(gaus, step);
+
+// //   return pow;
+// // }
+
+// // console.log(gaus(disp(arr, medium(arr)), medium(arr), arr));
+// console.log(arr);
+// console.log('Среднее значение: ',  medium(arr));
+// console.log('Дисперсия: ', disp(arr, medium(arr)));
+// console.log('Медиана: ', mediana(arr));
+// console.log('75-процентиль: ', sevenfiveProc(arr));
+// console.log('25-процентиль: ', twofiveProc(arr));
+
+// let ul = document.querySelector('ul')
+
+// ul.innerHTML = `
+//   <li>Значения: <span>${JSON.stringify(arr).replace(/,/g, ', ').replace('[', '').replace(']', '')}</span></li>
+//   <li>Среднее значение: <span>${medium(arr)}</span></li>
+//   <li>Дисперсия: <span>${disp(arr, medium(arr))}</span></li>
+//   <li>Медиана: <span>${mediana(arr)}</span></li>
+//   <li>75-процентиль: <span>${sevenfiveProc(arr)}</span></li>
+//   <li>25-процентиль: <span>${twofiveProc(arr)}</span></li>
+// `
+
+// console.log();
+
+// let wrapper = document.querySelector('.wrapper')
+
+// wrapper.addEventListener('click', (event) => {
+//   const tagName = event.target.tagName.toLowerCase();
+//   if (tagName === 'p') {
+//     event.target.style.color = 'red'
+//   }
+// })
+
+// let counter = 0;
+
+// // setTimeout(() => {
+// //   console.log(++counter);
+// // }, 3 * 1000)
+
+// let interval = setInterval(() => {
+//   console.log(++counter);
+// }, 1000 * 2);
+
+// setTimeout(() => {clearInterval(interval)}, 5 * 1000)
+
+// client --> server --> DataBase --> server --> client
+
+// console.log('Клиент: хочу получить данные о пользователе');
+// console.log('...');
+
+// setTimeout(function () {
+//   console.log('Сервер запрашивает данные у БД');
+//   console.log('...');
+
+//   setTimeout(function () {
+//     console.log('БД формирует данные для сервера');
+//     console.log('...');
+
+//     setTimeout(function () {
+//       console.log('Сервер формирует данные для клиента');
+//       console.log('...');
+//       setTimeout(function () {
+//         console.log('Клиент получил данные и отображает их');
+//         console.log('...');
+//       }, 1000);
+//     }, 500);
+//   }, 500);
+// }, 1000);
+
+// let promise = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     console.log('Сервер запрашивает данные у БД');
+//     console.log('...');
+//     resolve();
+//   }, 1000);
+// });
+
+// promise
+//   .then(function () {
+//     return new Promise(function (resolve, reject) {
+//       setTimeout(function () {
+//         let users = [
+//           { uid: 'id1', name: 'Maxim' },
+//           { uid: 'id2', name: 'Elena' },
+//         ];
+//         console.log('БД формирует данные для сервера');
+//         console.log('...');
+//         resolve(users);
+//       }, 500);
+//     });
+//   })
+//   .then(function (dbUsers) {
+//     return new Promise(function (resolve, reject) {
+//       setTimeout(function () {
+//         console.log('Сервер формирует данные для клиента');
+//         console.log('...');
+//         let users = dbUsers.map((user) => {
+//           return {
+//             id: user.uid,
+//             firstName: user.name,
+//             timestamp: Date.now(),
+//           };
+//         });
+//         resolve(users);
+//       }, 500);
+//     });
+//   })
+//   .then(function (users) {
+//     setTimeout(function () {
+//       console.log('Клиент получил данные и отображает их', users);
+//     }, 1000);
+//   });
+
+// document.querySelector('#btn').addEventListener('click', load);
+
+// async function load() {
+//   let url = 'https://jsonplaceholder.typicode.com/users';
+
+//   let response = await fetch(url);
+//   let data = await response.json();
+
+//   let html = data
+//     .map(function (item) {
+//       return '<li>' + item.id + ' ' + item.name + '(' + item.email + ')</li>';
+//     })
+//     .join(' ');
+
+//   document.querySelector('#list').insertAdjacentHTML('afterbegin', html);
+// }
+
+// function sleep(ms) {
+//   return new Promise(function(resolve) {
+//     setTimeout(function() {
+//       resolve()
+//     }, ms)
+
+//   })
+// }
+
+// sleep(1500).then(() => console.log('1500'))
+// sleep(3000).then(() => console.log('3000'))
+
+// Promise.all([sleep(1500), sleep(3000)]).then(() => console.log('All'))
+// Promise.race([sleep(1500), sleep(3000)]).then(() => console.log('race'))
+
+/* Задача
+  Реализуйте класс MyPromise, который будет рабоать точно так же,  как и Promise.
+  Достаточно реализовать методы: then, catch, finally
+  Методы all, race делать не нужно
+*/
+
+// let promise = new Promise(function(resolve,reject) {
+//   setTimeout(function(){
+//     resolve(2)
+//   }, 1000)
+// })
+//   promise
+//     .then(function(num) {
+//       console.log(num = num * 2);
+//     })
+//     .catch(function() {
+//       console.log('Error 202');
+//     })
+//     .finally(function() {
+//       console.log('Finally');
+//     })
+
+class MyPromise {
+  constructor(callback) {
+    this.onCatch = null;
+    this.onFinally = null;
+    this.thenCbs = [];
+    this.isRejected = false
+
+    function resolver(data) {
+      if (this.isRejected) {
+        return
+      }
+      this.thenCbs.forEach((cb) => {
+        data = cb(data);
+      });
+
+      if (this.onFinally) {
+        this.onFinally();
+      }
+    }
+    function rejecter(error) {
+      this.isRejected = true
+      if (this.onCatch) {
+        this.onCatch(error);
+      }
+      if (this.onFinally) {
+        this.onCatch();
+      }
+    }
+
+    callback(resolver.bind(this), rejecter.bind(this));
   }
-
-  localStorage.setItem('headerText', JSON.stringify(obj));
-})
-
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  let obj = JSON.parse(localStorage.getItem('headerText'));
-
-  if (obj.text && obj.text.trim()) {
-    document.querySelector('h1').textContent = obj.text;
+  then(cb) {
+    this.thenCbs.push(cb);
+    return this;
   }
-})
+  catch(cb) {
+    this.onCatch = cb;
+    return this;
+  }
+  finally(cb) {
+    this.onFinally = cb;
+    return this;
+  }
+}
+
+const promise = new MyPromise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(2);
+  }, 2000);
+});
+
+promise
+.then(num => num *= 2)
+.catch(err => console.log(err))
+.then(num => num *= 3)
+.then(num => console.log(num))
+.finally(() => console.log('finally'))
